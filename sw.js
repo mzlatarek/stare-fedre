@@ -1,1 +1,32 @@
-const CACHE='stare-fedre-v5-8-2';const SHELL=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)));self.skipWaiting()});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))));self.clients.claim()});self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;if(new URL(e.request.url).pathname.endsWith('/app-config.js')){e.respondWith(fetch(e.request,{cache:'no-store'}));return}e.respondWith(fetch(e.request).then(r=>{let c=r.clone();caches.open(CACHE).then(x=>x.put(e.request,c));return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match('./index.html'))))});
+const CACHE='stare-fedre-v5-8-3';
+const SHELL=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+
+self.addEventListener('install',e=>{
+  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)));
+  self.skipWaiting();
+});
+
+self.addEventListener('activate',e=>{
+  e.waitUntil(caches.keys().then(keys=>Promise.all(
+    keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))
+  )));
+  self.clients.claim();
+});
+
+self.addEventListener('fetch',e=>{
+  if(e.request.method!=='GET') return;
+
+  const url=new URL(e.request.url);
+  if(url.pathname.endsWith('/app-config.js')){
+    e.respondWith(fetch(e.request,{cache:'no-store'}));
+    return;
+  }
+
+  e.respondWith(
+    fetch(e.request).then(response=>{
+      const copy=response.clone();
+      caches.open(CACHE).then(cache=>cache.put(e.request,copy));
+      return response;
+    }).catch(()=>caches.match(e.request).then(response=>response||caches.match('./index.html')))
+  );
+});
