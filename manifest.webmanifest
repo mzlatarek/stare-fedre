@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Stare Fedre Računovodstvo",
   "short_name": "Stare Fedre",
-  "description": "Evidenca blagajne, stroškov, obiskov in uporabe objekta ekipe Stare Fedre.",
+  "description": "Mobilna evidenca blagajne, obiskov in uporabe objekta.",
   "lang": "sl",
   "start_url": "./",
   "scope": "./",
