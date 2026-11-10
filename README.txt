@@ -1,10 +1,11 @@
-STARE FEDRE V5.8.1
+STARE FEDRE V5.10 XMAS EDITION
 
-1. Before upload, edit app-config.js.
-2. Paste the complete Apps Script URL ending in /exec.
-3. Paste the same SECRET used in Code.gs.
-4. Upload every file to the GitHub Pages repository root.
-5. On the first phone launch, the app now performs a direct cloud LOAD.
-6. If installed as a PWA, fully close and reopen it after updating GitHub.
+New synced setting under Sync:
+- Off
+- Snow only
+- Full Christmas mode with occasional Santa flight
 
-The Sync page displays a clear error if app-config.js still contains placeholders.
+The setting is stored inside the shared cloud data. Choose a mode and click Apply and synchronize.
+Snow is lightweight, reduced on mobile, click-through, and disabled when the device requests reduced motion.
+
+Before upload, retain your working Apps Script URL and SECRET in app-config.js. Upload all files to the GitHub Pages root.
