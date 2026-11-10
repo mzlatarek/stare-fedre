@@ -1,11 +1,11 @@
-STARE FEDRE V5.10 XMAS EDITION
+STARE FEDRE V5.10.2 ADMIN RESTORE
 
-New synced setting under Sync:
-- Off
-- Snow only
-- Full Christmas mode with occasional Santa flight
+ADMIN MODE
+1. Edit app-config.js before upload.
+2. Keep your working Apps Script URL and SECRET.
+3. Replace adminPin:'CHANGE_ME' with your PIN, e.g. adminPin:'2468'.
+4. Upload all files.
 
-The setting is stored inside the shared cloud data. Choose a mode and click Apply and synchronize.
-Snow is lightweight, reduced on mobile, click-through, and disabled when the device requests reduced motion.
+Viewer mode is the default after every browser/app restart. Viewer can see synced data but write operations require Admin unlock. Admin unlock is session-only on each device.
 
-Before upload, retain your working Apps Script URL and SECRET in app-config.js. Upload all files to the GitHub Pages root.
+IMPORTANT: Because GitHub Pages is static, this PIN is UX access control, not cryptographic security. A technically skilled user could inspect app-config.js.
