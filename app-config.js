@@ -1,1 +1,1 @@
-window.STARE_FEDRE_CONFIG={url:'PASTE_APPS_SCRIPT_EXEC_URL_HERE',key:'PASTE_THE_SAME_SECRET_HERE',autoSync:true,autoRefresh:true};
+window.STARE_FEDRE_CONFIG={url:'https://script.google.com/macros/s/AKfycbzjcGjTNjQYJDaEOZcqUeQ0ETiCALYrpJTvkkWskP0bn9m0DWOylSAhg-DRJbqIMzjl9g/exec',key:'Stare_fedre_forever90!',autoSync:true,autoRefresh:true};
