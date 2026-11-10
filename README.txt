@@ -1,8 +1,10 @@
-STARE FEDRE V5.10.3 XMAS + ADMIN
+STARE FEDRE - COMPLETE REPLACEMENT PACKAGE
 
-Combines Admin/Viewer mode with synchronized Christmas theme.
-Admin control is under Sync and only visible after Admin unlock.
-Modes: Off; Snow + blinking lights; Full Xmas with snowfall, lights, snow caps and occasional Santa.
-Christmas setting is saved in the shared cloud state and therefore follows all synced users.
+Contains the full current application with Admin, Xmas, proportional player-cost allocation, mobile UI, cloud sync, and the corrected Vsi obiski calculation.
 
-Before upload set URL, key and adminPin in app-config.js.
+Vsi obiski rule:
+One unique attendance date with at least one present player = one visit.
+
+IMPORTANT:
+Keep your real URL, SECRET and adminPin in app-config.js before uploading.
+Upload all files in this package to the GitHub Pages repository root.
