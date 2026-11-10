@@ -1,11 +1,8 @@
-STARE FEDRE V5.10.2 ADMIN RESTORE
+STARE FEDRE V5.10.3 XMAS + ADMIN
 
-ADMIN MODE
-1. Edit app-config.js before upload.
-2. Keep your working Apps Script URL and SECRET.
-3. Replace adminPin:'CHANGE_ME' with your PIN, e.g. adminPin:'2468'.
-4. Upload all files.
+Combines Admin/Viewer mode with synchronized Christmas theme.
+Admin control is under Sync and only visible after Admin unlock.
+Modes: Off; Snow + blinking lights; Full Xmas with snowfall, lights, snow caps and occasional Santa.
+Christmas setting is saved in the shared cloud state and therefore follows all synced users.
 
-Viewer mode is the default after every browser/app restart. Viewer can see synced data but write operations require Admin unlock. Admin unlock is session-only on each device.
-
-IMPORTANT: Because GitHub Pages is static, this PIN is UX access control, not cryptographic security. A technically skilled user could inspect app-config.js.
+Before upload set URL, key and adminPin in app-config.js.
